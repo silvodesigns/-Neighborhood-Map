@@ -8,7 +8,7 @@ additional information about a landmark is presented from the FourSquare and Wik
 
 #How to Use
 
-To start, open index.html file wiht your favorite browser.
+To start, open index.html file with your favorite browser.
 Once on the website, you can filter the places on the searchbox or simply click on the markers to get infocard and news from NYT.
 
 #Skills Implemented
