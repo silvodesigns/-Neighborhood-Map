@@ -164,15 +164,24 @@ function ViewModel() {
         for (var i = 0; i < length; i++) {
 
             var img = '<img src="https://maps.googleapis.com/maps/api/streetview?size=200x200&location=' + self.places()[i].name + '&key=AIzaSyAtABxc1zGLRvkNG3ux8u3APQ95cOlbrso">';
-            self.images().push(img);
+            self.images().push({'image':img});
         }
 
 
     };
     self.generateStreetViewImages();
 
+    self.generateThumbs = function(){
+
+        for (var i = 0; i < length; i++) {
+
+        $('.icons').append('<li>'+  self.images()[i].image + '</li>');
+
+        }
 
 
+    };
+    self.generateThumbs();
 
     self.info = ko.observableArray([]);
     self.generateInfoWindowData = function() {
@@ -180,11 +189,12 @@ function ViewModel() {
 
             var data = '<div id="content">' + '<h1 id="firstHeading" class="firstHeading">' + self.places()[i].name + '</h1>' +
                 '<p>' + self.places()[i].address + '</p>' +
-                '</div>' + self.images()[i];
+                '</div>' + self.images()[i].image;
 
             self.info().push(data);
 
         }
+   
 
 
 
@@ -260,8 +270,6 @@ function ViewModel() {
 
         });
     }, this);
-
-
     //This function  determines which markers should be hid or shown on the map base on the user's input
 
     self.visibleMarkers = function() {
@@ -336,6 +344,16 @@ function ViewModel() {
             self.articles()[i].p('');
         }
 
+    };
+
+    self.mostrar = function(){
+
+        $('.esto').show();
+    };
+
+     self.esconder = function(){
+
+        $('.esto').hide();
     };
 
 
