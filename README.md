@@ -10,7 +10,7 @@ additional information about a landmark is presented from the FourSquare and Wik
 #How to Use
 
 To start, open index.html file with your favorite browser.
-Once on the website, you can filter the places on the searchbox or simply click on the markers to get infocard and news from NYT.
+Once on the website, you can filter the places on the searchbox or simply click on the markers to get infocard and news from New York Times News.
 
 #Skills Implemented
 HTML/ JAVASCRIPT/ CSS / KNOCKOUT /JAVASCRIPT WEB FRAMEWORKS
